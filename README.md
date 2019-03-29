@@ -27,8 +27,8 @@ git checkout 1.32.3
 
 ### Patch product.json to add Extensions
 ````
-wget http://file.patch
-git apply file.patch
+wget https://github.com/futurejones/code-oss-aarch64/raw/master/patches/v1.32.3/add_extensions_dissable_smoke_test.patch
+git apply add_extensions_dissable_smoke_test.patch
 ````
 
 ### Build Code OSS
