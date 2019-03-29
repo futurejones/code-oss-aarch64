@@ -1,4 +1,4 @@
-# Visual Studio Code OSS for Ubuntu AArch64 systems
+# Visual Studio Code OSS for Ubuntu AArch64
 ## Building Code - OSS from source.
 ### Install Prerequisites
 ````
