@@ -35,3 +35,10 @@ git apply add_extensions_dissable_smoke_test.patch
 ````
 yarn && yarn run gulp vscode-linux-arm64 && yarn run gulp vscode-linux-arm64-build-deb
 ````
+
+### Installation
+You will find the .deb install package in `.build/linux/deb/arm64/deb/`  
+Install using `apt` packet manager.
+````
+sudo apt install -y ./.build/linux/deb/arm64/deb/code-oss_*_arm64.deb
+````
