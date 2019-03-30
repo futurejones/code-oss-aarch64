@@ -42,3 +42,10 @@ Install using `apt` packet manager.
 ````
 sudo apt install -y ./.build/linux/deb/arm64/deb/code-oss_*_arm64.deb
 ````
+
+### Easy Build Script
+````
+wget https://github.com/futurejones/code-oss-aarch64/raw/master/build/vscode_build.sh
+chmod +x vscode_build.sh
+./vscode_build.sh
+````
