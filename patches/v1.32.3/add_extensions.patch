@@ -1,16 +1,3 @@
-diff --git a/build/npm/postinstall.js b/build/npm/postinstall.js
-index 34a8e28..2db03ce 100644
---- a/build/npm/postinstall.js
-+++ b/build/npm/postinstall.js
-@@ -60,7 +60,7 @@ runtime "${runtime}"`;
- }
- 
- yarnInstall(`build`); // node modules required for build
--yarnInstall('test/smoke'); // node modules required for smoketest
-+// yarnInstall('test/smoke'); // node modules required for smoketest
- yarnInstallBuildDependencies(); // node modules for watching, specific to host node version, not electron
- 
- // Remove the windows process tree typings as this causes duplicate identifier errors in tsc builds
 diff --git a/product.json b/product.json
 index eb6526c..bf4039c 100644
 --- a/product.json

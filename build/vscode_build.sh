@@ -23,8 +23,8 @@ cd vscode
 git checkout 1.32.3
 
 # Patch product.json to add Extensions
-wget https://github.com/futurejones/code-oss-aarch64/raw/master/patches/v1.32.3/add_extensions_dissable_smoke_test.patch
-git apply add_extensions_dissable_smoke_test.patch
+wget https://github.com/futurejones/code-oss-aarch64/raw/master/patches/v1.32.3/add_extensions.patch
+git apply add_extensions.patch
 
 # Build Code OSS
 yarn && yarn run gulp vscode-linux-arm64-min && yarn run gulp vscode-linux-arm64-build-deb
