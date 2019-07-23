@@ -1,4 +1,11 @@
 # Visual Studio Code OSS for Ubuntu AArch64
+## Package Repository for Ubuntu 16.04 / 18.04
+https://packagecloud.io/swift-arm/vscode
+### Add Repository and Install
+```
+curl -s https://packagecloud.io/install/repositories/swift-arm/vscode/script.deb.sh | sudo bash
+sudo apt-get install code-oss
+```
 ## Building Code - OSS from source.
 ### Install Prerequisites
 ````
