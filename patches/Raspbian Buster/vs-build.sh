@@ -13,7 +13,7 @@ yarn
 # patch electron download
 sed -i "s/var arch = opts.arch;/var arch = 'armv7l';/" node_modules/gulp-atom-electron/src/download.js
 # build and package .deb
-yarn run gulp vscode-linux-arm64-min && yarn run gulp vscode-linux-arm64-build-deb
+yarn run gulp vscode-linux-arm-min && yarn run gulp vscode-linux-arm-build-deb
 
 # Copy .deb package file to main directory
 cp ./.build/linux/deb/armhf/deb/code-oss_*_armhf.deb .
