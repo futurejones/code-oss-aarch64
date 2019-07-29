@@ -5,8 +5,8 @@ echo
 git checkout 1.36.1
 wget https://github.com/futurejones/code-oss-aarch64/raw/master/patches/Raspbian%20Buster/add_extensions_1.36.1.patch
 wget https://github.com/futurejones/code-oss-aarch64/raw/master/patches/Raspbian%20Buster/max_old_space_size_2048.patch
-apply add_extensions_1.36.1.patch
-apply max_old_space_size_2048.patch
+git apply add_extensions_1.36.1.patch
+git apply max_old_space_size_2048.patch
 
 # download packages
 yarn
