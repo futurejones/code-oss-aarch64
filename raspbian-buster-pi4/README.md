@@ -78,7 +78,7 @@ yarn run gulp vscode-linux-arm-build-deb
 ```
 cp ./.build/linux/deb/armhf/deb/code-oss_*_armhf.deb .
 ```
-* Install  - *NOTE: replace "\*" with package version nunber*
+* Install  - *NOTE: replace "\*" with package version number e.g. code-oss_1.36.1-1564711196_armhf*
 ```
 sudo apt install ./code-oss_*_armhf.deb
 ```
