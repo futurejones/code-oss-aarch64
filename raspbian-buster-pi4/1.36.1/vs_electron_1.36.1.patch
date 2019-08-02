@@ -1,0 +1,22 @@
+diff --git a/build/gulpfile.vscode.js b/build/gulpfile.vscode.js
+index 84a6be26e8..3ba3e9418e 100644
+--- a/build/gulpfile.vscode.js
++++ b/build/gulpfile.vscode.js
+@@ -201,7 +201,7 @@ function getElectron(arch) {
+ 	return () => {
+ 		const electronOpts = _.extend({}, config, {
+ 			platform: process.platform,
+-			arch,
++			arch: 'armv7l',
+ 			ffmpegChromium: true,
+ 			keepDefaultApp: true
+ 		});
+@@ -379,7 +379,7 @@ function packageTask(platform, arch, sourceFolderName, destinationFolderName, op
+ 		let result = all
+ 			.pipe(util.skipDirectories())
+ 			.pipe(util.fixWin32DirectoryPermissions())
+-			.pipe(electron(_.extend({}, config, { platform, arch, ffmpegChromium: true })))
++			.pipe(electron(_.extend({}, config, { platform, arch: 'armv7l', ffmpegChromium: true })))
+ 			.pipe(filter(['**', '!LICENSE', '!LICENSES.chromium.html', '!version'], { dot: true }));
+ 
+ 		// result = es.merge(result, gulp.src('resources/completions/**', { base: '.' }));

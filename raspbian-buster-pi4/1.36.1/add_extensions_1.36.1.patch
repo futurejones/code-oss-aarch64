@@ -1,0 +1,19 @@
+diff --git a/product.json b/product.json
+index 4103352af8..8037965bff 100644
+--- a/product.json
++++ b/product.json
+@@ -22,5 +22,12 @@
+ 	"urlProtocol": "code-oss",
+ 	"extensionAllowedProposedApi": [
+ 		"ms-vscode.references-view"
+-	]
++	],
++	"extensionsGallery": {
++		"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
++		"cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
++		"itemUrl": "https://marketplace.visualstudio.com/items",
++		"controlUrl": "https://az764295.vo.msecnd.net/extensions/marketplace.json",
++		"recommendationsUrl": "https://az764295.vo.msecnd.net/extensions/workspaceRecommendations.json.gz"
++	}
+ }
+\ No newline at end of file
