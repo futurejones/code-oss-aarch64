@@ -3,14 +3,14 @@
 ## Quick Install for Raspbian Buster
 #### Package Repo - https://packagecloud.io/swift-arm/vscode  
 Install repo  
-```bash
+```
 curl -s https://packagecloud.io/install/repositories/swift-arm/vscode/script.deb.sh | sudo bash
 ```  
 Install VSCode  
 ```
 sudo apt-get install code-oss
 ```
-
+<hr size="1" width="80%">
 # How to Build VSCode v1.36.1 for Raspbian Buster
 
 *NOTE: Build instructions are for Raspberry Pi 4GB version*  
