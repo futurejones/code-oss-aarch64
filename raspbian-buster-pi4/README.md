@@ -10,7 +10,7 @@ Install VSCode
 ```
 sudo apt-get install code-oss
 ```
-<hr size="1" width="80%">
+<hr align="center"size="1" width="80%">
 # How to Build VSCode v1.36.1 for Raspbian Buster
 
 *NOTE: Build instructions are for Raspberry Pi 4GB version*  
