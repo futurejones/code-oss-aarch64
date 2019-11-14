@@ -1,0 +1,72 @@
+diff --git a/build/gulpfile.vscode.js b/build/gulpfile.vscode.js
+index 91dec59636..cfb0cfbf1c 100644
+--- a/build/gulpfile.vscode.js
++++ b/build/gulpfile.vscode.js
+@@ -201,7 +201,7 @@ function getElectron(arch) {
+ 	return () => {
+ 		const electronOpts = _.extend({}, config, {
+ 			platform: process.platform,
+-			arch,
++			arch: 'armv7l',
+ 			ffmpegChromium: true,
+ 			keepDefaultApp: true
+ 		});
+@@ -379,7 +379,7 @@ function packageTask(platform, arch, sourceFolderName, destinationFolderName, op
+ 		let result = all
+ 			.pipe(util.skipDirectories())
+ 			.pipe(util.fixWin32DirectoryPermissions())
+-			.pipe(electron(_.extend({}, config, { platform, arch, ffmpegChromium: true })))
++			.pipe(electron(_.extend({}, config, { platform, arch: 'armv7l', ffmpegChromium: true })))
+ 			.pipe(filter(['**', '!LICENSE', '!LICENSES.chromium.html', '!version']));
+ 
+ 		// result = es.merge(result, gulp.src('resources/completions/**', { base: '.' }));
+diff --git a/package.json b/package.json
+index 49944ece7d..cff748bf3a 100644
+--- a/package.json
++++ b/package.json
+@@ -11,12 +11,12 @@
+     "test": "mocha",
+     "preinstall": "node build/npm/preinstall.js",
+     "postinstall": "node build/npm/postinstall.js",
+-    "compile": "gulp compile --max_old_space_size=4095",
+-    "watch": "gulp watch --max_old_space_size=4095",
+-    "watch-client": "gulp watch-client --max_old_space_size=4095",
++    "compile": "gulp compile --max_old_space_size=1024",
++    "watch": "gulp watch --max_old_space_size=1024",
++    "watch-client": "gulp watch-client --max_old_space_size=1024",
+     "monaco-editor-test": "mocha --only-monaco-editor",
+     "precommit": "node build/gulpfile.hygiene.js",
+-    "gulp": "gulp --max_old_space_size=4095",
++    "gulp": "gulp --max_old_space_size=1024",
+     "7z": "7z",
+     "update-grammars": "node build/npm/update-all-grammars.js",
+     "update-localization-extension": "node build/npm/update-localization-extension.js",
+@@ -51,7 +51,7 @@
+     "vscode-nsfw": "1.1.1",
+     "vscode-proxy-agent": "0.4.0",
+     "vscode-ripgrep": "^1.2.5",
+-    "vscode-sqlite3": "4.0.7",
++    "vscode-sqlite3": "4.0.6",
+     "vscode-textmate": "^4.1.1",
+     "vscode-xterm": "3.14.0-beta7",
+     "yauzl": "^2.9.2",
+diff --git a/product.json b/product.json
+index 4103352af8..b7b57f4355 100644
+--- a/product.json
++++ b/product.json
+@@ -22,5 +22,12 @@
+ 	"urlProtocol": "code-oss",
+ 	"extensionAllowedProposedApi": [
+ 		"ms-vscode.references-view"
+-	]
+-}
+\ No newline at end of file
++	],
++	"extensionsGallery": {
++		"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
++		"cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
++		"itemUrl": "https://marketplace.visualstudio.com/items",
++		"controlUrl": "https://az764295.vo.msecnd.net/extensions/marketplace.json",
++		"recommendationsUrl": "https://az764295.vo.msecnd.net/extensions/workspaceRecommendations.json.gz"
++	}
++}
