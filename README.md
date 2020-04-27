@@ -1,5 +1,5 @@
 # Visual Studio Code OSS for Ubuntu AArch64
-## Package Repository for Ubuntu 16.04 / 18.04
+## Package Repository for Ubuntu 16.04 / 18.04 / 20.04
 https://packagecloud.io/swift-arm/vscode
 ### Add Repository and Install
 ```
@@ -11,12 +11,22 @@ sudo apt-get install code-oss
 ````
 sudo apt-get install git python gcc g++ make libx11-dev libxkbfile-dev fakeroot rpm libsecret-1-dev
 ````
+#### Note for Ubuntu 20.04
+Python or (python2) is not included anymore in Ubuntu 20.04. The python package is no longer available. To install and use python2 as "python" you need to install "python-is-python2".
+```
+sudo apt install python-is-python2
+```
 
 ### Install Node.JS - version >= 10.15.1, < 11.0.0
 ````
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ````
+#### Note for Ubuntu 20.04
+The default version of nodejs on Ubuntu 20.04 is v10.19.0 so it is not necessary to add the nodesource.
+```
+sudo apt install nodejs npm
+```
 
 ### Install Yarn
 ````
@@ -29,12 +39,12 @@ sudo apt-get update && sudo apt-get install yarn
 ````
 git clone https://github.com/Microsoft/vscode.git
 cd vscode
-git checkout 1.32.3
+git checkout 1.44.2
 ````
 
 ### Patch product.json to add Extensions
 ````
-wget https://github.com/futurejones/code-oss-aarch64/raw/master/patches/v1.32.3/add_extensions.patch
+wget https://github.com/futurejones/code-oss-aarch64/raw/master/patches/v1.44.2/add_extensions.patch
 git apply add_extensions.patch
 ````
 
