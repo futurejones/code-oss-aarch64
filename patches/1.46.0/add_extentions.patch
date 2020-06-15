@@ -1,0 +1,18 @@
+diff --git a/product.json b/product.json
+index d586d2fc06..2198196089 100644
+--- a/product.json
++++ b/product.json
+@@ -27,6 +27,13 @@
+ 		"ms-vscode.vscode-js-profile-table",
+ 		"ms-vscode.references-view"
+ 	],
++	"extensionsGallery": {
++		"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
++		"cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
++		"itemUrl": "https://marketplace.visualstudio.com/items",
++		"controlUrl": "https://az764295.vo.msecnd.net/extensions/marketplace.json",
++		"recommendationsUrl": "https://az764295.vo.msecnd.net/extensions/workspaceRecommendations.json.gz"
++	},
+ 	"builtInExtensions": [
+ 		{
+ 			"name": "ms-vscode.node-debug",
