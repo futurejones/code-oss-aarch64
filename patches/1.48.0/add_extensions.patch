@@ -1,0 +1,18 @@
+diff --git a/product.json b/product.json
+index efbb04d8b5..86ed6d90d4 100644
+--- a/product.json
++++ b/product.json
+@@ -28,6 +28,13 @@
+ 		"ms-vscode.references-view",
+ 		"ms-vscode.github-browser"
+ 	],
++	"extensionsGallery": {
++				"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
++				"cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
++				"itemUrl": "https://marketplace.visualstudio.com/items",
++				"controlUrl": "https://az764295.vo.msecnd.net/extensions/marketplace.json",
++				"recommendationsUrl": "https://az764295.vo.msecnd.net/extensions/workspaceRecommendations.json.gz"
++			},
+ 	"builtInExtensions": [
+ 		{
+ 			"name": "ms-vscode.node-debug",
