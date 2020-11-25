@@ -1,4 +1,6 @@
 # Visual Studio Code OSS for Ubuntu AArch64
+> ### *NOTE: You can now get official VSCode downloads for arm64/armhf from [Microsoft](https://code.visualstudio.com/#alt-downloads)*  
+> *Versions from v1.51.1 in the package repository are now the official Microsoft versions.*
 ## Package Repository for Ubuntu 16.04 / 18.04 / 20.04
 https://packagecloud.io/swift-arm/vscode
 ### Add Repository and Install
